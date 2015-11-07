@@ -1,4 +1,4 @@
-# '.text.html.php':
-#     'Snippet Name':
-#         'prefix': 'hotkey'
-#         'body': 'function ( $1 ) {}'
+'.text.html.php':
+    'Year':
+        'prefix': 'year'
+        'body': '<?php echo date('Y'); ?>'
