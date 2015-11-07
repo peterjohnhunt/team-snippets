@@ -8,7 +8,7 @@
   "activationCommands": {
     "atom-workspace": "team-snippets:toggle"
   },
-  "repository": "https://github.com/atom/team-snippets",
+  "repository": "https://github.com/peterjohnhunt/team-snippets.git",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
