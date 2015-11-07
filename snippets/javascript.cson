@@ -1,0 +1,4 @@
+# '.source.js':
+#     'Snippet Name':
+#         'prefix': 'hotkey'
+#         'body': 'function ( $1 );'

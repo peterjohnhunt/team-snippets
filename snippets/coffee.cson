@@ -1,0 +1,4 @@
+# '.source.coffee':
+#     'Snippet Name':
+#         'prefix': 'hotkey'
+#         'body': 'function ( $1 ) {}'

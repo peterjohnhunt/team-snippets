@@ -5,7 +5,6 @@
   "description": "A short description of your package",
   "keywords": [],
   "activationCommands": {
-    "atom-workspace": "team-snippets:toggle"
   },
   "repository": "https://github.com/peterjohnhunt/team-snippets.git",
   "license": "MIT",

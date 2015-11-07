@@ -1,0 +1,4 @@
+# '.text.html.php':
+#     'Snippet Name':
+#         'prefix': 'hotkey'
+#         'body': 'function ( $1 ) {}'
