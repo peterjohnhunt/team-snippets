@@ -1,4 +1,4 @@
-# '.source.coffee':
-#     'Snippet Name':
-#         'prefix': 'hotkey'
-#         'body': 'function ( $1 ) {}'
+'.source.coffee':
+    'Log':
+        'prefix': '_'
+        'body': 'console.log $1'
