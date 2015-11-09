@@ -1,4 +1,4 @@
-# '.source.js':
-#     'Snippet Name':
-#         'prefix': 'hotkey'
-#         'body': 'function ( $1 );'
+'.source.js':
+    'Log':
+        'prefix': '_'
+        'body': 'console.log( $1 );$2'
