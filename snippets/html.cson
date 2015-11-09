@@ -100,4 +100,4 @@
 
     'Background Image':
         'prefix': 'bgimg'
-        'body': 'style="background-image:url(/'/${1:image}/'/)"'
+        'body': 'style="background-image:url(\'${1:image}\')"'
