@@ -21,9 +21,9 @@
         'body': """
 <? /*░░░░░░░░░░░░░░░░░░░░░░░░░
 
-	  DIRECTORY
+      DIRECTORY
 
-	  _${1:Title}
+      _${1:Title}
 
    ░░░░░░░░░░░░░░░░░░░░░░░░░*/ ?>
 
@@ -61,14 +61,14 @@ $2
     #    Page_Setup
     #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
 
-    'PageSetup':
-        'prefix': 'dir'
+    'Page Setup':
+        'prefix': 'page'
         'body': """
 <? /*░░░░░░░░░░░░░░░░░░░░░░░░░
 
-	  DIRECTORY
+      DIRECTORY
 
-	  _${1:Title}
+      _${1:Title}
 
    ░░░░░░░░░░░░░░░░░░░░░░░░░*/ ?>
 
