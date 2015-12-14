@@ -1,0 +1,16 @@
+'.text.html.php':
+    'Nav Fix':
+        'prefix': '.nav'
+        'body': """
+        <div class="nav">$1</div>$2
+        """
+    'A Button Fix':
+        'prefix': 'a.button'
+        'body': """
+        <a href="$1" class="button">$2</a>$3
+        """
+    'Div Button Fix':
+        'prefix': '.button'
+        'body': """
+        <div class="button">$1</div>$2
+        """
