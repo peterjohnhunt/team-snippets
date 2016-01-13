@@ -1,4 +1,4 @@
-'.source.php':
+'.text.html.php':
 
     ###≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 
@@ -16,28 +16,28 @@
 
     'ACF Get Field':
         'prefix': 'gf'
-        'body': 'get_field( \'$1\' );$2'
+        'body': '<?php get_field( \'$1\' ); ?>$2'
     'ACF The Field':
         'prefix': 'tf'
-        'body': 'the_field( \'$1\' );$2'
+        'body': '<?php the_field( \'$1\' ); ?>$2'
     'ACF Get Sub Field':
         'prefix': 'gsf'
-        'body': 'get_sub_field( \'$1\' );$2'
+        'body': '<?php get_sub_field( \'$1\' ); ?>$2'
     'ACF The Sub Field':
         'prefix': 'tsf'
-        'body': 'the_sub_field( \'$1\' );$2'
+        'body': '<?php the_sub_field( \'$1\' ); ?>$2'
     'ACF Get Field Option':
         'prefix': 'gfo'
-        'body': 'get_field( \'$1\', \'option\' );$2'
+        'body': '<?php get_field( \'$1\', \'option\' ); ?>$2'
     'ACF The Field Option':
         'prefix': 'tfo'
-        'body': 'the_field( \'$1\', \'option\' );$2'
+        'body': '<?php the_field( \'$1\', \'option\' ); ?>$2'
     'ACF Get Field Taxonomy':
         'prefix': 'gft'
-        'body': 'get_field( \'$1\', \'${2:taxonomy_slug}_\'.${3:term_id} );$4'
+        'body': '<?php get_field( \'$1\', \'${2:taxonomy_slug}_\'.${3:term_id} ); ?>$4'
     'ACF The Field Taxonomy':
         'prefix': 'tft'
-        'body': 'the_field( \'$1\', \'${2:taxonomy_slug}_\'.${3:term_id} );$4'
+        'body': '<?php the_field( \'$1\', \'${2:taxonomy_slug}_\'.${3:term_id} ); ?>$4'
 
 
     #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
@@ -47,23 +47,23 @@
     'ACF If Get Field':
         'prefix': 'gfi'
         'body': """
-            if( get_field( '${1:field_name}' ) ){
-                ${2:// Code_Here...}
-            }$3
+            <?php if( get_field( '${1:field_name}' ) ): ?>
+                ${2:<!-- Code_Here... -->}
+            <?php endif; ?>$3
         """
     'ACF If Get Sub Field':
         'prefix': 'gsfi'
         'body': """
-            if( get_sub_field( '${1:sub_field_name}' ) ){
-                ${2:// Code_Here...}
-            }$3
+            <?php if( get_sub_field( '${1:sub_field_name}' ) ): ?>
+                ${2:<!-- Code_Here... -->}
+            <?php endif; ?>$3
         """
     'ACF If Get Field Option':
         'prefix': 'gsfi'
         'body': """
-            if( get_field( '${1:sub_field_name}', \'option\' ) ){
-                ${2:// Code_Here...}
-            }$3
+            <?php if( get_field( '${1:sub_field_name}', \'option\' ) ): ?>
+                ${2:<!-- Code_Here... -->}
+            <?php endif; ?>$3
         """
 
 
@@ -74,31 +74,31 @@
     'ACF Repeater Loop':
         'prefix': 'rl'
         'body': """
-            if( have_rows( '${1:repeater_name}' ) ){
-                while ( have_rows( '${1:repeater_name}' ) ) : the_row();{
+            <?php if( have_rows( '${1:repeater_name}' ) ): ?>
+                <?php while ( have_rows( '${1:repeater_name}' ) ) : the_row(); ?>
                     ${2://Code Here...}
-                }
-            }$3
+                <?php endwhile; ?>
+            <?php endif; ?>$3
         """
     'ACF Flexlayout Loop':
         'prefix': 'fl'
         'body': """
-            if( have_rows( '${1:flex_layout_name}' ) ){
-                while ( have_rows( '${1:flex_layout_name}' ) ) : the_row();{
-                    if( get_row_layout() == '${2:field_name}' ){
+            <?php if( have_rows( '${1:flex_layout_name}' ) ): ?>
+                <?php while ( have_rows( '${1:flex_layout_name}' ) ) : the_row(); ?>
+                    <?php if( get_row_layout() == '${2:field_name}' ): ?>
 
-                        the_sub_field( '${2:field_name}' );$3
+                        <?php the_sub_field( '${2:field_name}' ); ?>$3
 
-                    }
-                }
-            }$4
+                    <?php endif; ?>
+                <?php endwhile; ?>
+            <?php endif; ?>$4
         """
     'ACF Flexlayout Loop ElseIf':
         'prefix': 'fle'
         'body': """
 
 
-            } elseif( get_row_layout() == '${2:field_name}' ) {
+            <?php elseif( get_row_layout() == '${2:field_name}' ): ?>
 
-                the_sub_field( '${2:field_name}' );$3
+                <?php the_sub_field( '${2:field_name}' ); ?>$3
         """
