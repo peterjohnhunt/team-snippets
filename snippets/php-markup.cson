@@ -56,6 +56,10 @@ $2
             $2
         """
 
+    'Sub-Section Symbol':
+        'prefix': 'subtitle'
+        'body': '    ∟${1:sub}'
+
 
     #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
     #    Page_Setup

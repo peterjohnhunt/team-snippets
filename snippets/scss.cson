@@ -58,7 +58,7 @@
 
     'Sub-Section Symbol':
         'prefix': 'subtitle'
-        'body': '∟${1:sub}'
+        'body': '//         ∟${1:sub}'
 
 
     #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
