@@ -51,7 +51,7 @@
             <?php
             	\$args = array(
             		${1:'post_type' => '${2:Post Type}',}
-            		${3:'posts_per_page' => '${4:Post Number}', // -1 will list all posts }
+            		${3:'posts_per_page' => ${4:-1} }
             		${5:'orderby' => '${6:date}',}
             		${7:'order' => '${8:ASC/DESC}',}
             	);
@@ -59,8 +59,7 @@
             ?>
             <?php if ( \$the_query->have_posts() ) : ?>
             	${9:}
-            	${0:<?php while ( \$the_query->have_posts() ) : ?>
-            		<?php \$the_query->the_post(); ?>
+            	${0:<?php while ( \$the_query->have_posts() ) : \$the_query->the_post(); ?>
             		${10:}
             	<?php endwhile; ?>}
             	${11:}
