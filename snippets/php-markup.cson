@@ -9,6 +9,7 @@
             Page_Setup
             Meta
             SVG
+            Template_Part
 
     ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡###
 
@@ -101,3 +102,12 @@ $2
     'SVG':
         'prefix': 'svgimg'
         'body': '<?php include("${1:path/image}.svg"); ?>'
+
+
+    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+    #    Template_Part
+    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+
+    'Get Template Part':
+        'prefix': 'gtp'
+        'body': '<?php get_template_part("layouts/${1:folder}"); ?>'
