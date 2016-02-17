@@ -48,7 +48,7 @@
         'body': """
         	\$args = array(
         		${1:'post_type' => '${2:Post Type}',}
-        		${3:'posts_per_page' => '${4:Post Number}', // -1 will list all posts }
+        		${3:'posts_per_page' => '${4:-1}',}
         		${5:'orderby' => '${6:date}',}
         		${7:'order' => '${8:ASC/DESC}',}
         	);
