@@ -38,6 +38,12 @@
     'ACF The Field Taxonomy':
         'prefix': 'tft'
         'body': 'the_field( \'$1\', \'${2:taxonomy_slug}_\'.${3:term_id} );$4'
+    'ACF Get Template ID':
+        'prefix': 'gpbt'
+        'body': 'get_page_by_template( \'$1\' );$2'
+    'ACF The Template ID':
+        'prefix': 'gpbt'
+        'body': 'the_page_by_template( \'$1\' );$2'
 
 
     #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
