@@ -42,7 +42,7 @@
         'prefix': 'gpbt'
         'body': 'get_page_by_template( \'$1\' );$2'
     'ACF The Template ID':
-        'prefix': 'gpbt'
+        'prefix': 'tpbt'
         'body': 'the_page_by_template( \'$1\' );$2'
 
 
