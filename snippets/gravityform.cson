@@ -1,0 +1,20 @@
+'.source.php':
+
+    ###≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+
+        GF SNIPPETS DIRECTORY
+
+            Filters
+
+    ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡###
+
+    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+    #    Filters
+    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+
+    'GF Confirmation Anchor: All Forms':
+        'prefix': 'grca'
+        'body': 'add_filter( \'gform_confirmation_anchor\', \'__return_true\' );'
+    'GF Confirmation Anchor: By Form ID':
+        'prefix': 'grcaid'
+        'body': 'add_filter( \'gform_confirmation_anchor_${1:ID}\', \'__return_true\' );'
