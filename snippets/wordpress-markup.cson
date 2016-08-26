@@ -8,6 +8,7 @@
             Navigation
             Query
             Get_Terms
+            Template_Setup
 
     ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡###
 
@@ -91,4 +92,20 @@
 
                 $terms = get_terms($taxonomies, $args);
             ?>$10
+        """
+
+
+    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+    #    Template_Setup
+    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+
+    'Template Setup':
+        'prefix': 'template'
+        'body': """
+            <?php /* Template Name: ${1:Template Name} */ ?>
+            <?php get_header(); ?>
+
+                $2
+
+            <?php get_footer(); ?>
         """

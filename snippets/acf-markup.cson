@@ -102,3 +102,15 @@
 
                 <?php the_sub_field( '${2:field_name}' ); ?>$3
         """
+    'Automatic Flex Layouts':
+        'prefix': 'afl'
+        'body': """
+            <?php if( have_rows( '${1:page_builder}' ) ) : ?>
+                <?php while ( have_rows( '${1:page_builder}' ) ) : the_row(); ?>
+                    <?php
+                        $layout = str_replace("_", "-", get_row_layout());
+                        get_template_part('layouts/page-builder/'.$layout);
+                    ?>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        """
