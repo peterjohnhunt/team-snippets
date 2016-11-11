@@ -75,7 +75,7 @@
 	'Breakpoint Mixin':
 		'prefix': 'bpmix'
 		'body': """
-			@include breakpoint(${1:two}){
+			@include breakpoint(${1:desktop}){
 				${2:}
 			}
 		"""

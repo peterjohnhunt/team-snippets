@@ -94,4 +94,4 @@
 
 	'Else If':
 		'prefix': 'elseif'
-		'body': '<?php elseif: ?>'
+		'body': '<?php elseif (${1:condition}): ?>'
