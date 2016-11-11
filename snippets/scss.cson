@@ -1,135 +1,114 @@
 '.source.css':
 
-    ###≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+	###≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 
-        PHP SNIPPETS DIRECTORY
+		PHP SNIPPETS DIRECTORY
 
-            Directory
-            Sections
-            Breakpoints
-            Notes
-            Prefixes
+			Directory
+			Sections
+			Breakpoints
+			Notes
+			Prefixes
 
-    ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡###
+	≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡###
 
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
-    #    Directory
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Directory
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
 
-    'Directory':
-        'prefix': 'dir'
-        'body': """
-            //░░░░░░░░░░░░░░░░░░░░░░░░
-            //
-            //	 DIRECTORY
-            //
-            //	 _${1:Title}
-            //
-            //░░░░░░░░░░░░░░░░░░░░░░░░
+	'Directory':
+		'prefix': 'dir'
+		'body': """
+			//░░░░░░░░░░░░░░░░░░░░░░░░
+			//
+			//	 DIRECTORY
+			//
+			//	 _${1:Title}
+			//
+			//░░░░░░░░░░░░░░░░░░░░░░░░
 
+			$2
+		"""
 
-            $2
-        """
-
-
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
-    #    Sections
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
-
-    'Section':
-        'prefix': 'sec'
-        'body': """
-            //▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-            // _${1:Title}
-            //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-            $2
-        """
-
-    'Sub-Section':
-        'prefix': 'sub'
-        'body': """
-            //░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-            // ∟${1:sub}
-            //░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-            $2
-        """
-
-    'Sub-Section Symbol':
-        'prefix': 'subtitle'
-        'body': '//       ∟${1:sub}'
+	'Sub-Section Symbol':
+		'prefix': 'subtitle'
+		'body': '//       ∟${1:sub}'
 
 
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
-    #    Breakpoints
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Sections
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
 
-    'Breakpoint Section':
-        'prefix': 'break'
-        'body': """
-            //☲☲☲☲☲☲☲☲☲☲☲╣ BREAKPOINTS ╠☲☲☲☲☲☲☲☲☲☲☲☲//
+	'Section':
+		'prefix': 'sec'
+		'body': """
+			//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+			// _${1:Title}
+			//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-            $1
-        """
+			$2
+		"""
 
-    'Breakpoint Mixin':
-        'prefix': 'bpmix'
-        'body': """
-            @include breakpoint(${1:two}){
-            	${2:}
-            }
-        """
+	'Sub-Section':
+		'prefix': 'sub'
+		'body': """
+			//░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+			// ∟${1:sub}
+			//░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
-    #    Notes
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
-
-    'Basic Note':
-        'prefix': 'explain'
-        'body': """
-            // ════ⓝⓞⓣⓔ════
-            // $1
-        """
-
-    'Use Note':
-        'prefix': 'use'
-        'body': """
-            // ════ⓤⓢⓔ════
-            // $1
-        """
+			$2
+		"""
 
 
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
-    #    Prefixes
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Breakpoints
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
 
-    'Transition':
-        'prefix': 'ease'
-        'body': """
-            -webkit-transition: ${1:all} ${2:0.35s} ease-in-out;
-            -moz-transition: ${1:all} ${2:0.35s} ease-in-out;
-            -o-transition: ${1:all} ${2:0.35s} ease-in-out;
-            transition: ${1:all} ${2:0.35s} ease-in-out;
-        """
+	'Breakpoint Section':
+		'prefix': 'break'
+		'body': """
+			//☲☲☲☲☲☲☲☲☲☲☲╣ BREAKPOINTS ╠☲☲☲☲☲☲☲☲☲☲☲☲//
 
-    'Transform':
-        'prefix': 'transform'
-        'body': """
-            transform:$1;
-            -webkit-transform:$1;
-            -moz-transform:$1;
-            -o-transform:$1;
-            -ms-transform:$1;
-        """
+			$1
+		"""
 
-    'Prefixes':
-        'prefix': 'prefix'
-        'body': """
-            $1:$2;
-            -webkit-$1:$2;
-            -moz-$1:$2;
-            -o-$1:$2;
-            -ms-$1:$2;
-        """
+	'Breakpoint Mixin':
+		'prefix': 'bpmix'
+		'body': """
+			@include breakpoint(${1:two}){
+				${2:}
+			}
+		"""
+
+
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Notes
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+
+	'Basic Note':
+		'prefix': 'explain'
+		'body': """
+			// ════ⓝⓞⓣⓔ════
+			// $1
+		"""
+
+	'Use Note':
+		'prefix': 'use'
+		'body': """
+			// ════ⓤⓢⓔ════
+			// $1
+		"""
+
+
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Prefixes
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+
+	'Transition':
+		'prefix': 'transition'
+		'body': """
+			-webkit-transition: ${1:all} ${2:0.35s} ease-in-out;
+			-moz-transition: ${1:all} ${2:0.35s} ease-in-out;
+			-o-transition: ${1:all} ${2:0.35s} ease-in-out;
+			transition: ${1:all} ${2:0.35s} ease-in-out;
+		"""

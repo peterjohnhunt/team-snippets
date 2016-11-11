@@ -1,27 +1,56 @@
 '.text.html':
 
-    ###≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+	###≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 
-        HTML SNIPPETS DIRECTORY
+		HTML SNIPPETS DIRECTORY
 
-            Entities
-            Inline
+			Entities
+			Inline
+			Footer
 
-    ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡###
+	≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡###
 
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
-    #    Entities
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Entities
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
 
-    'Copyright Entity':
-        'prefix': 'copy'
-        'body': '&copy;'
+	'Copyright Entity':
+		'prefix': 'copy'
+		'body': '&copy;'
 
 
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
-    #    Inline
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Inline
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
 
-    'Background Image':
-        'prefix': 'bgimg'
-        'body': 'style="background-image:url(\'${1:image}\')"'
+	'Background Image':
+		'prefix': 'bgimg'
+		'body': 'style="background-image:url(\'${1:image}\')"'
+
+
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Footer
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+
+	'LLT':
+	  'prefix': 'llt'
+	  'body': 'Designed &amp; Developed by <a href="http://www.llt-group.com" target="_blank">LLT Group</a>'
+
+	'Setup':
+		'prefix': 'setup'
+		'body': """
+			<!DOCTYPE html>
+			<html lang="en">
+			<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+				<title>Title</title>
+			</head>
+			<body>
+
+				$1
+
+			</body>
+
+			</html>
+		"""

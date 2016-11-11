@@ -1,110 +1,92 @@
 '.source.php':
 
-    ###≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+	###≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 
-        ACF SNIPPETS DIRECTORY
+		ACF SNIPPETS DIRECTORY
 
-            Fields
-            IFs
-            Loops
+			Fields
+			IFs
+			Loops
 
-    ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡###
+	≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡###
 
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
-    #    Fields
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Fields
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
 
-    'ACF Get Field':
-        'prefix': 'gf'
-        'body': 'get_field( \'$1\' );$2'
-    'ACF The Field':
-        'prefix': 'tf'
-        'body': 'the_field( \'$1\' );$2'
-    'ACF Get Sub Field':
-        'prefix': 'gsf'
-        'body': 'get_sub_field( \'$1\' );$2'
-    'ACF The Sub Field':
-        'prefix': 'tsf'
-        'body': 'the_sub_field( \'$1\' );$2'
-    'ACF Get Field Option':
-        'prefix': 'gfo'
-        'body': 'get_field( \'$1\', \'option\' );$2'
-    'ACF The Field Option':
-        'prefix': 'tfo'
-        'body': 'the_field( \'$1\', \'option\' );$2'
-    'ACF Get Field Taxonomy':
-        'prefix': 'gft'
-        'body': 'get_field( \'$1\', \'${2:taxonomy_slug}_\'.${3:term_id} );$4'
-    'ACF The Field Taxonomy':
-        'prefix': 'tft'
-        'body': 'the_field( \'$1\', \'${2:taxonomy_slug}_\'.${3:term_id} );$4'
-    'ACF Get Template ID':
-        'prefix': 'gpbt'
-        'body': 'get_page_by_template( \'$1\' );$2'
-    'ACF The Template ID':
-        'prefix': 'tpbt'
-        'body': 'the_page_by_template( \'$1\' );$2'
+	'ACF Get Field':
+		'prefix': 'gf'
+		'body': 'get_field( \'$1\' )$2'
+	'ACF The Field':
+		'prefix': 'tf'
+		'body': 'the_field( \'$1\' );$2'
+	'ACF Get Sub Field':
+		'prefix': 'gsf'
+		'body': 'get_sub_field( \'$1\' )$2'
+	'ACF The Sub Field':
+		'prefix': 'tsf'
+		'body': 'the_sub_field( \'$1\' );$2'
+	'ACF Get Field Option':
+		'prefix': 'gfo'
+		'body': 'get_field( \'$1\', \'${2:option}\' )$3'
+	'ACF The Field Option':
+		'prefix': 'tfo'
+		'body': 'the_field( \'$1\', \'${2:option}\' );$3'
+	'ACF Get Field Taxonomy':
+		'prefix': 'gft'
+		'body': 'get_field( \'$1\', \'${2:taxonomy_slug}_\'.${3:term_id} )$4'
+	'ACF The Field Taxonomy':
+		'prefix': 'tft'
+		'body': 'the_field( \'$1\', \'${2:taxonomy_slug}_\'.${3:term_id} );$4'
 
 
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
-    #    IFs
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    IFs
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
 
-    'ACF If Get Field':
-        'prefix': 'gfi'
-        'body': """
-            if( get_field( '${1:field_name}' ) ){
-                ${2:// Code_Here...}
-            }$3
-        """
-    'ACF If Get Sub Field':
-        'prefix': 'gsfi'
-        'body': """
-            if( get_sub_field( '${1:sub_field_name}' ) ){
-                ${2:// Code_Here...}
-            }$3
-        """
-    'ACF If Get Field Option':
-        'prefix': 'gsfi'
-        'body': """
-            if( get_field( '${1:sub_field_name}', \'option\' ) ){
-                ${2:// Code_Here...}
-            }$3
-        """
-
-
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
-    #    Loops
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
-
-    'ACF Repeater Loop':
-        'prefix': 'rl'
-        'body': """
-            if( have_rows( '${1:repeater_name}' ) ){
-                while ( have_rows( '${1:repeater_name}' ) ) : the_row();{
-                    ${2://Code Here...}
-                }
-            }$3
-        """
-    'ACF Flexlayout Loop':
-        'prefix': 'fl'
-        'body': """
-            if( have_rows( '${1:flex_layout_name}' ) ){
-                while ( have_rows( '${1:flex_layout_name}' ) ) : the_row();{
-                    if( get_row_layout() == '${2:field_name}' ){
-
-                        the_sub_field( '${2:field_name}' );$3
-
-                    }
-                }
-            }$4
-        """
-    'ACF Flexlayout Loop ElseIf':
-        'prefix': 'fle'
-        'body': """
+	'ACF If Get Field':
+		'prefix': 'gfi'
+		'body': """
+			if( get_field( '${1:field_name}' ) ){
+				$2
+			}$3
+		"""
+	'ACF If Get Sub Field':
+		'prefix': 'gsfi'
+		'body': """
+			if( get_sub_field( '${1:sub_field_name}' ) ){
+				$2
+			}$3
+		"""
+	'ACF If Get Field Option':
+		'prefix': 'gfoi'
+		'body': """
+			if( get_field( '${1:sub_field_name}', \'${2:option}\' ) ){
+				$3
+			}$4
+		"""
 
 
-            } elseif( get_row_layout() == '${2:field_name}' ) {
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Loops
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
 
-                the_sub_field( '${2:field_name}' );$3
-        """
+	'ACF Repeater Loop':
+		'prefix': 'repeater'
+		'body': """
+			if( have_rows( '${1:repeater_name}' ) ){
+				while ( have_rows( '${1:repeater_name}' ) ) : the_row();{
+					$2
+				}
+			}$3
+		"""
+	'ACF Dynamic Flex Layouts':
+	  'prefix': 'flex'
+	  'body': """
+			if( have_rows( '${1:page_builder}' ) ) {
+				while ( have_rows( '${1:page_builder}' ) ) { the_row();
+					$layout = str_replace("_", "-", get_row_layout());
+					get_template_part('layouts/${2:page-builder}/'.$layout);
+				}
+			}$3
+		"""

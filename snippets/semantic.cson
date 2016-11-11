@@ -1,0 +1,35 @@
+'.text.html':
+
+	###≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+
+		HTML SNIPPETS DIRECTORY
+
+			Section
+			Attributes
+
+	≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡###
+
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Section
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+
+	'section':
+		'prefix': 'sec'
+		'body': '<section role="$1">$2</section>$3'
+
+	'aside':
+		'prefix': 'aside'
+		'body': '<aside role="$1">$2</aside>$3'
+
+	'nav':
+		'prefix': 'nav'
+		'body': '<nav role="$1">$2</nav>$3'
+
+
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Attributes
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+
+	'role':
+		'prefix': 'role'
+		'body': 'role="$1"'

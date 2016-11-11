@@ -1,86 +1,113 @@
 '.source.php':
 
-    ###≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+	###≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 
-        WORDPRESS SNIPPETS DIRECTORY
+		WORDPRESS SNIPPETS DIRECTORY
 
-            Log
-            Navigation
-            Query
-            Get_Terms
+			Log
+			Navigation
+			Query
+			Get_Terms
+			Other
 
-    ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡###
+	≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡###
 
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
-    #    Log
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Log
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
 
-    'Log':
-        'prefix': '_'
-        'body': '_log( $1 );$2'
-
-
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
-    #    Navigation
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
-
-    'WP Nav Menu':
-        'prefix': 'wp_nav_menu'
-        'body': """
-        	\$nav_args = array(
-        		${1:'theme_location' => '${2:header-menu}',}
-        		${3:'fallback_cb' => false,}
-        		${4:'container' => '${5:div}',}
-        		${6:'container_class' => '${7:nav}',}
-        		${8:'items_wrap' => '<ul id="%1\$s" class="%2\$s">%3\$s</ul>',}
-        		${9:'walker' => 'new ${10:Custom_Walker}',}
-        	);
-        	wp_nav_menu(\$nav_args);$11
-        """
+	'Log':
+		'prefix': '_'
+		'body': '_log( $1 );$2'
 
 
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
-    #    Query
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Navigation
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
 
-    'WP Query':
-        'prefix': 'wp_query'
-        'body': """
-        	\$args = array(
-        		${1:'post_type' => '${2:Post Type}',}
-        		${3:'posts_per_page' => '${4:-1}',}
-        		${5:'orderby' => '${6:date}',}
-        		${7:'order' => '${8:ASC/DESC}',}
-        	);
-        	\$the_query = new WP_Query( \$args );
-            if ( \$the_query->have_posts() ) {
-            	while ( \$the_query->have_posts() ) { $the_query->the_post();
-                    ${8:// Posts Code Here...}
-            	}
-            } else {
-            	${9:// No Posts Code Here...}
-            }
-            wp_reset_postdata();$10
-        """
+	'WP Nav Menu':
+		'prefix': 'wpnav'
+		'body': """
+			\$nav_args = array(
+				${1:'theme_location' => '${2:header-menu}',}
+				${3:'fallback_cb' => false,}
+				${4:'container' => '${5:div}',}
+				${6:'container_class' => '${7:nav}',}
+				${8:'items_wrap' => '<ul id="%1\$s" class="%2\$s">%3\$s</ul>',}
+			);
+			wp_nav_menu(\$nav_args);$9
+		"""
 
 
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
-    #    Get_Terms
-    #▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Query
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
 
-    'WP Get Terms':
-        'prefix': 'get_terms'
-        'body': """
-            $taxonomies = array(
-                '${1:taxonomy_name}',
-            );
+	'WP Query':
+		'prefix': 'wpquery'
+		'body': """
+			\$args = array(
+				${1:'post_type' => '${2:Post Type}',}
+				${3:'posts_per_page' => '${4:-1}',}
+				${5:'orderby' => '${6:date}',}
+				${7:'order' => '${8:ASC/DESC}',}
+			);
+			\$the_query = new WP_Query( \$args );
 
-            $args = array(
-                ${2:'orderby'           => ${3:'name'},}
-                ${4:'order'             => ${5:'ASC'},}
-                ${6:'hide_empty'        => ${7:true},}
-                ${8:'parent'            => ${9:''},}
-            );
+			if ( \$the_query->have_posts() ) {
+				while ( \$the_query->have_posts() ) { $the_query->the_post();
 
-            $terms = get_terms($taxonomies, $args);$10
-        """
+					$8
+
+				}
+			}
+			wp_reset_postdata();$9
+		"""
+
+
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Get_Terms
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+
+	'WP Get Terms':
+		'prefix': 'terms'
+		'body': """
+			$taxonomies = array(
+				'${1:taxonomy_name}',
+			);
+
+			$args = array(
+				${2:'orderby'           => ${3:'name'},}
+				${4:'order'             => ${5:'ASC'},}
+				${6:'hide_empty'        => ${7:true},}
+				${8:'parent'            => ${9:''},}
+			);
+
+			$terms = get_terms($taxonomies, $args);$10
+		"""
+
+
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Other
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+
+	'WP Featured Image':
+		'prefix': 'fi'
+		'body': "wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '${1:IMAGE_SIZE}')"
+	
+
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Exclusive
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+
+	'WP Get Exclusive ID':
+		'prefix': 'exid'
+		'body': "get_exclusive_id( \' ${1:template} \')"
+
+	'WP Get Exclusive Link':
+		'prefix': 'exlink'
+		'body': "get_exclusive_link( \' ${1:template} \')"
+
+	'WP Is Exclusive':
+		'prefix': 'exis'
+		'body': "is_exclusive( \' ${1:template} \')"
