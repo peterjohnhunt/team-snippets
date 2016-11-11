@@ -1,7 +1,7 @@
 {
   "name": "team-snippets",
   "main": "./lib/team-snippets",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "A short description of your package",
   "keywords": [],
   "activationCommands": {},
