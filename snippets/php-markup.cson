@@ -9,6 +9,7 @@
 			Meta
 			Template_Part
 			Variable_Setup
+			Conditionals
 
 	≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡###
 
@@ -85,3 +86,12 @@
 					${1:$var}
 				?>
 			"""
+
+
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+	#    Conditionals
+	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
+
+	'Else If'
+		'prefix': 'elseif'
+		'body': '<?php elseif: ?>'
