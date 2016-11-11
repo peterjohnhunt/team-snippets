@@ -92,6 +92,6 @@
 	#    Conditionals
 	#▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤#
 
-	'Else If'
+	'Else If':
 		'prefix': 'elseif'
 		'body': '<?php elseif: ?>'
